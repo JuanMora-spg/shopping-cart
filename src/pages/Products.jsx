@@ -1,5 +1,11 @@
+import { ShoppingLayout } from "../layout/ShoppingLayout";
+
 function Products() {
-  return <h1>Products page</h1>;
+  return (
+    <ShoppingLayout>
+      <h1>Products Page</h1>
+    </ShoppingLayout>
+  );
 }
 
 export { Products };
