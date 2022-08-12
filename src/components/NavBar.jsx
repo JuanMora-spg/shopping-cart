@@ -4,7 +4,7 @@ function NavBar() {
   return (
     <nav className="nav">
       <h1>Shopping cart</h1>
-      <span>Cart Icon</span>
+      <span>Cart</span>
     </nav>
   );
 }
