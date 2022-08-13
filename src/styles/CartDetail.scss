@@ -1,3 +1,5 @@
+@use "_mixins" as *;
+
 .cart-container {
   position: absolute;
   right: 0;
@@ -7,6 +9,10 @@
   background-color: rgb(255, 255, 255);
   padding: 2rem;
   animation: increase 0.3s ease;
+
+  @include small-screen {
+    width: 100%;
+  }
 
   .btn-close {
     position: absolute;
@@ -27,6 +33,11 @@
     width: 0;
   }
   to {
-    width: 300px;
+    @include small-screen {
+      width: 100%;
+    }
+    @include medium-screen {
+      width: 300px;
+    }
   }
 }
