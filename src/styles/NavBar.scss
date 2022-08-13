@@ -5,4 +5,18 @@
   background-color: rgb(36, 36, 67);
   color: white;
   padding: 0 1rem;
+
+  .item {
+    color: white;
+    font-size: 18px;
+
+    .btn_cart {
+      background: none;
+      border: none;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
 }

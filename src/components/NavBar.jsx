@@ -1,6 +1,8 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { useModal } from "../hooks/useModal";
-import { Modal } from "./Modal";
-import { CartDetail } from "./CartDetail";
+import { Modal } from "./";
+import { CartDetail } from "./";
 import "../styles/NavBar.scss";
 
 function NavBar() {
@@ -9,7 +11,12 @@ function NavBar() {
   return (
     <nav className="nav">
       <h1>Shopping cart</h1>
-      <span onClick={handleOpen}>Cart</span>
+      <div className="item" onClick={handleOpen}>
+        Cart
+        <button className="btn_cart item">
+          <FontAwesomeIcon icon={faCartShopping} />
+        </button>
+      </div>
 
       {isOpenCartModal && (
         <Modal>
