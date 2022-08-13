@@ -1,28 +1,17 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
-import { useModal } from "../hooks/useModal";
-import { Modal } from "./";
-import { CartDetail } from "./";
+import { CartIcon } from "./CartIcon";
 import "../styles/NavBar.scss";
 
 function NavBar() {
-  const { isOpen: isOpenCartModal, handleOpen, handleClose } = useModal(false);
-
   return (
     <nav className="nav">
-      <h1>Shopping cart</h1>
-      <div className="item" onClick={handleOpen}>
-        Cart
-        <button className="btn_cart item">
-          <FontAwesomeIcon icon={faCartShopping} />
-        </button>
-      </div>
-
-      {isOpenCartModal && (
-        <Modal>
-          <CartDetail handleClose={handleClose} />
-        </Modal>
-      )}
+      <ul className="nav__list">
+        <li className="nav__item">
+          <h1 className="nav__link nav__link--title">Shopping cart</h1>
+        </li>
+        <li className="nav__item">
+          <CartIcon />
+        </li>
+      </ul>
     </nav>
   );
 }
