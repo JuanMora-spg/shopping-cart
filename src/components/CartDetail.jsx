@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
+import { ShoppingCartItem } from "./ShoppingCartItem";
 import "../styles/CartDetail.scss";
 
 function CartDetail({ handleClose }) {
@@ -9,6 +10,7 @@ function CartDetail({ handleClose }) {
         <FontAwesomeIcon icon={faXmark} />
       </button>
       <p>Cart Details</p>
+      <ShoppingCartItem />
     </section>
   );
 }
