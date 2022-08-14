@@ -5,28 +5,28 @@ import "../styles/CartDetail.scss";
 
 function CartDetail({ handleClose }) {
   return (
-    <section className="cart-container">
+    <section className="cart-detail">
       <button
         type="button"
-        className="cart-container__close"
+        className="cart-detail__close"
         onClick={handleClose}
       >
         <FontAwesomeIcon icon={faXmark} />
       </button>
-      <p className="cart-container__title">Cart</p>
-      <div className="cart-container__body">
+      <h3 className="cart-detail__title">Cart</h3>
+      <div className="cart-detail__body">
         {[1, 2, 3, 4].map((item) => (
           <CartItem key={item} />
         ))}
       </div>
-      <div className="cart-container__footer">
-        <p className="cart-container__text cart-container__text--bolder">
+      <div className="cart-detail__footer">
+        <p className="cart-detail__text cart-detail__text--bolder">
           Total: $9,000
         </p>
-        <button className="cart-container__btn cart-container__btn--danger">
+        <button className="cart-detail__btn cart-detail__btn--danger">
           Clear cart
         </button>
-        <button className="cart-container__btn cart-container__btn--success">
+        <button className="cart-detail__btn cart-detail__btn--success">
           Continue to pay
         </button>
       </div>
