@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
-import { ShoppingCartItem } from "./ShoppingCartItem";
+import { CartItem } from "./CartItem";
 import "../styles/CartDetail.scss";
 
 function CartDetail({ handleClose }) {
@@ -16,7 +16,7 @@ function CartDetail({ handleClose }) {
       <p className="cart-container__title">Cart</p>
       <div className="cart-container__body">
         {[1, 2, 3, 4].map((item) => (
-          <ShoppingCartItem key={item} />
+          <CartItem key={item} />
         ))}
       </div>
       <div className="cart-container__footer">

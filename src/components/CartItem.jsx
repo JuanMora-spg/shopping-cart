@@ -1,8 +1,8 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
-import "../styles/ShoppingCartItem.scss";
+import "../styles/CartItem.scss";
 
-function ShoppingCartItem() {
+function CartItem() {
   return (
     <div className="cart-item">
       <button className="cart-item__delete">
@@ -22,4 +22,4 @@ function ShoppingCartItem() {
   );
 }
 
-export { ShoppingCartItem };
+export { CartItem };
