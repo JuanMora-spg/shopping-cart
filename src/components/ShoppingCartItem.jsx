@@ -5,7 +5,7 @@ import "../styles/ShoppingCartItem.scss";
 function ShoppingCartItem() {
   return (
     <div className="cart-item">
-      <button className="cart-item__btn cart-item__btn--delete">
+      <button className="cart-item__delete">
         <FontAwesomeIcon icon={faTrash} />
       </button>
       <h4 className="cart-item__title">Article name</h4>

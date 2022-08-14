@@ -11,3 +11,13 @@ $mobile-width: 500px;
     @content;
   }
 }
+
+@mixin btnIcon($font-color, $font-size) {
+  display: flex;
+  align-items: center;
+  border: none;
+  background: none;
+  color: $font-color;
+  font-size: $font-size;
+  cursor: pointer;
+}

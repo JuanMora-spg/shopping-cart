@@ -3,41 +3,34 @@
 .cart-icon {
   position: relative;
   display: flex;
+  color: white;
+  font-size: 18px;
 
-  &__item {
-    color: white;
-    font-size: 18px;
+  &__text {
+    font-weight: 100;
+    margin: 0;
+    padding: 0;
 
-    &--text {
-      font-weight: 100;
-      margin: 0;
-      padding: 0;
-
-      @include small-screen {
-        display: none;
-      }
+    @include small-screen {
+      display: none;
     }
+  }
 
-    &--btn {
-      display: flex;
-      align-items: center;
-      background: none;
-      border: none;
-      cursor: pointer;
-    }
+  &__btn {
+    @include btnIcon(white, 18px);
+  }
 
-    &--notification {
-      position: absolute;
-      width: 20px;
-      height: 20px;
-      top: -10px;
-      right: -10px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 100%;
-      background-color: rgb(27, 179, 27);
-      font-size: 14px;
-    }
+  &__notification {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: -10px;
+    right: -10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    background-color: rgb(27, 179, 27);
+    font-size: 14px;
   }
 }

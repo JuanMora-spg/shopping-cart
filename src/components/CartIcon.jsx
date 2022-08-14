@@ -11,15 +11,11 @@ function CartIcon() {
   return (
     <>
       <div className="cart-icon" onClick={handleOpen}>
-        <p className="cart-icon__item cart-icon__item--text">Cart</p>
-        <button
-          type="button"
-          title="shopping cart"
-          className="cart-icon__item cart-icon__item--btn"
-        >
+        <p className="cart-icon__text">Cart</p>
+        <button type="button" title="shopping cart" className="cart-icon__btn">
           <FontAwesomeIcon icon={faCartShopping} />
         </button>
-        <span className="cart-icon__item cart-icon__item--notification">3</span>
+        <span className="cart-icon__notification">3</span>
       </div>
       {isOpenCartModal && (
         <Modal>

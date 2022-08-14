@@ -7,19 +7,52 @@
   bottom: 0;
   width: 300px;
   background-color: rgb(255, 255, 255);
-  padding: 1rem;
   animation: increase 0.3s ease;
 
-  .btn-close {
-    border: none;
-    background-color: white;
-    color: black;
-    font-size: 24px;
+  &__close {
+    @include btnIcon(black, 24px);
   }
 
-  .cart-container--inner {
+  &__title {
+    margin-left: 0.5rem;
+  }
+
+  &__body {
+    padding: 1rem;
     height: 60vh;
     overflow-y: scroll;
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0px -15px 10px -15px hsla(0, 0%, 7%, 0.494);
+  }
+
+  &__text {
+    &--bolder {
+      font-weight: bolder;
+    }
+  }
+
+  &__btn {
+    background: none;
+    border: none;
+    padding: 1rem 2rem;
+    margin: 0.5rem 0;
+    border-radius: 32px;
+    cursor: pointer;
+  }
+
+  &__btn--danger {
+    border: solid 1px green;
+  }
+
+  &__btn--success {
+    background-color: green;
+    color: white;
   }
 
   @include small-screen {
