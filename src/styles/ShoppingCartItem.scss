@@ -22,10 +22,12 @@
 
   &__title {
     color: grey;
+    margin: 0.25rem 0;
   }
 
   &__img {
-    width: 100%;
+    width: 70%;
+    margin: auto;
   }
   &__text {
     color: grey;
