@@ -8,6 +8,7 @@ function CartDetail({ handleClose }) {
     <section className="cart-detail">
       <button
         type="button"
+        title="close"
         className="cart-detail__close"
         onClick={handleClose}
       >
