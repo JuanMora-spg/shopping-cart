@@ -9,8 +9,12 @@ function CartDetail({ handleClose }) {
       <button type="button" className="btn-close" onClick={handleClose}>
         <FontAwesomeIcon icon={faXmark} />
       </button>
-      <p>Cart Details</p>
-      <ShoppingCartItem />
+      <p>Cart</p>
+      <div className="cart-container--inner">
+        {[1, 2, 3, 4].map((item) => (
+          <ShoppingCartItem key={item} />
+        ))}
+      </div>
     </section>
   );
 }
