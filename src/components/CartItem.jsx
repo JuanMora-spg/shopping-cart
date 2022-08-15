@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import { NumberInput } from "./";
 import "../styles/CartItem.scss";
 
 function CartItem() {
@@ -17,7 +18,9 @@ function CartItem() {
       <p className="cart-item__text cart-item__text--center">
         $900 x 2 = <span className="cart-item__text--bold">$18,000</span>
       </p>
-      <div>Number Stepper</div>
+      <div className="cart-item__number-input">
+        <NumberInput />
+      </div>
     </div>
   );
 }

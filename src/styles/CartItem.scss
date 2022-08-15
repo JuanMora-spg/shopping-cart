@@ -38,4 +38,12 @@
       font-weight: 600;
     }
   }
+  &__number-input {
+    width: 40%;
+    margin: 0.5rem auto;
+
+    @include small-screen {
+      width: 50%;
+    }
+  }
 }
