@@ -24,10 +24,16 @@ function CartDetail({ handleClose }) {
         <p className="cart-detail__text cart-detail__text--bolder">
           Total: $9,000
         </p>
-        <button className="cart-detail__btn cart-detail__btn--danger">
+        <button
+          type="button"
+          className="cart-detail__btn cart-detail__btn--danger"
+        >
           Clear cart
         </button>
-        <button className="cart-detail__btn cart-detail__btn--success">
+        <button
+          type="button"
+          className="cart-detail__btn cart-detail__btn--success"
+        >
           Continue to pay
         </button>
       </div>
