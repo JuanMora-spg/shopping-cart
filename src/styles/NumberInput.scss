@@ -1,6 +1,7 @@
 @use "mixins" as *;
 
 .number-input {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   font-size: 16px;
@@ -9,7 +10,7 @@
   background-color: #f5f5f5;
 
   &__btn {
-    @include btnIcon(#242443, 16px);
+    @include btnIcon(#242443, 14px);
     display: flex;
     justify-content: center;
     align-items: center;
