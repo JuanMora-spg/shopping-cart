@@ -7,7 +7,6 @@
   bottom: 0;
   width: 350px;
   background-color: rgb(255, 255, 255);
-  animation: increase 0.3s ease;
 
   &__close {
     @include btnIcon(black, 24px);
@@ -55,19 +54,5 @@
 
   @include small-screen {
     width: 100%;
-  }
-}
-
-@keyframes increase {
-  from {
-    width: 0;
-  }
-  to {
-    @include small-screen {
-      width: 100%;
-    }
-    @include medium-screen {
-      width: 350px;
-    }
   }
 }

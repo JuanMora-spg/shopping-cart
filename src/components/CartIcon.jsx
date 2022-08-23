@@ -10,18 +10,16 @@ function CartIcon() {
 
   return (
     <>
-      <div className="cart-icon" onClick={handleOpen}>
+      <div className="cart-icon" onClick={() => handleOpen()}>
         <p className="cart-icon__text">Cart</p>
         <button type="button" title="shopping cart" className="cart-icon__btn">
           <FontAwesomeIcon icon={faCartShopping} />
         </button>
         <span className="cart-icon__notification">3</span>
       </div>
-      {isOpenCartModal && (
-        <Modal>
-          <CartDetail handleClose={handleClose} />
-        </Modal>
-      )}
+      <Modal isOpen={isOpenCartModal}>
+        <CartDetail handleClose={handleClose} />
+      </Modal>
     </>
   );
 }
