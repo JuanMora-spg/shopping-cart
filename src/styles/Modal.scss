@@ -1,5 +1,4 @@
 .modal-container {
-  background-color: rgba(41, 36, 36, 0.2);
   position: fixed;
   z-index: 9999;
   top: 0;
@@ -7,11 +6,13 @@
   width: 100%;
 
   &.shown {
+    background-color: rgba(41, 36, 36, 0.104);
     left: 0;
     right: 0;
     animation: fadeInRight 0.3s ease;
   }
   &.hidden {
+    background-color: rgba(41, 36, 36, 0);
     left: 100%;
     right: -100%;
     animation: fadeOutRight 0.3s ease;
