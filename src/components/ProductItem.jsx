@@ -1,7 +1,10 @@
+import { Link } from "react-router-dom";
 import { NumberInput } from "./";
 import "../styles/ProductItem.scss";
 
 function ProductItem() {
+  const id = 25;
+
   return (
     <article className="product-item">
       <img
@@ -10,9 +13,9 @@ function ProductItem() {
         alt="product"
       />
       <p>$ Price</p>
-      <a className="product-item__link" href="">
+      <Link to={`product/${id}`} className="product-item__link">
         View
-      </a>
+      </Link>
       <button className="product-item__btn">Add to cart</button>
       <div className="product-item__number-input">
         <NumberInput />

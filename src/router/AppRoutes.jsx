@@ -5,7 +5,7 @@ function AppRouter() {
   return (
     <Routes>
       <Route path="/" element={<Products />}></Route>
-      <Route path="/details" element={<Details />}></Route>
+      <Route path="/product/:id" element={<Details />}></Route>
       <Route path="/*" element={<NotFound />}></Route>
     </Routes>
   );
