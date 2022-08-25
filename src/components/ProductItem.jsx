@@ -2,17 +2,11 @@ import { Link } from "react-router-dom";
 import { NumberInput } from "./";
 import "../styles/ProductItem.scss";
 
-function ProductItem() {
-  const id = 25;
-
+function ProductItem({ id, image, price }) {
   return (
     <article className="product-item">
-      <img
-        className="product-item__img"
-        src="https://images.unsplash.com/photo-1615655406736-b37c4fabf923?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-        alt="product"
-      />
-      <p>$ Price</p>
+      <img className="product-item__img" src={image} alt="product image" />
+      <p>$ {price}</p>
       <Link to={`product/${id}`} className="product-item__link">
         View
       </Link>
