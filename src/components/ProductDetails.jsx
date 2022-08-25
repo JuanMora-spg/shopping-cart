@@ -1,13 +1,12 @@
 import { useSelector } from "react-redux";
-import { useParams, Navigate } from "react-router-dom";
-import { NumberInput } from "../components/NumberInput";
+import { useParams } from "react-router-dom";
 import { NotFound } from "../pages";
+import { NumberInput } from "../components/NumberInput";
 import "../styles/ProductDetails.scss";
 
 function ProductDetails() {
   const { id } = useParams();
 
-  //Checking wether with this id exists
   const { products } = useSelector((state) => state.shop);
 
   const selectedProduct = products.find((product) => product.id === Number(id));
