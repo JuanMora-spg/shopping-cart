@@ -13,15 +13,15 @@ function ProductDetails() {
   const { cartItems } = useSelector((state) => state.cart);
 
   const selectedProduct = products.find((product) => product.id === Number(id));
-  const productInCart = cartItems.find((item) => item.id === Number(id));
-
-  const { image, title, description, price } = selectedProduct;
-
-  const handleAddToCart = () => dispatch(addToCart(selectedProduct));
 
   if (!selectedProduct) {
     return <NotFound />;
   }
+
+  const productInCart = cartItems.find((item) => item.id === Number(id));
+  const { image, title, description, price } = selectedProduct;
+
+  const handleAddToCart = () => dispatch(addToCart(selectedProduct));
 
   return (
     <article className="product-details">
