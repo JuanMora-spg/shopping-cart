@@ -5,8 +5,8 @@ import {
   CLEAR_CART,
 } from "./cart.actionTypes";
 
-function addToCart(id) {
-  return { type: ADD_TO_CART, payload: id };
+function addToCart(product) {
+  return { type: ADD_TO_CART, payload: product };
 }
 
 function deleteFromCart(id, all = false) {
