@@ -1,21 +1,27 @@
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
+import { addToCart } from "../store/cart/cart.actions";
 import { NotFound } from "../pages";
 import { NumberInput } from "../components/NumberInput";
 import "../styles/ProductDetails.scss";
 
 function ProductDetails() {
   const { id } = useParams();
+  const dispatch = useDispatch();
 
   const { products } = useSelector((state) => state.shop);
+  const { cartItems } = useSelector((state) => state.cart);
 
   const selectedProduct = products.find((product) => product.id === Number(id));
+  const productInCart = cartItems.find((item) => item.id === Number(id));
+
+  const { image, title, description, price } = selectedProduct;
+
+  const handleAddToCart = () => dispatch(addToCart(selectedProduct));
 
   if (!selectedProduct) {
     return <NotFound />;
   }
-
-  const { image, title, description, price } = selectedProduct;
 
   return (
     <article className="product-details">
@@ -27,10 +33,20 @@ function ProductDetails() {
         <p className="product-details__description">{description}</p>
         <p className="product-details__price">$ {price}</p>
         <div className="product-details__actions">
-          <button className="product-details__btn">Add to Cart</button>
-          <div className="product-details__number-input">
-            <NumberInput />
-          </div>
+          <button
+            className={`product-details__btn ${
+              !!productInCart && "product-details__btn--disabled"
+            }`}
+            onClick={handleAddToCart}
+            disabled={!!productInCart}
+          >
+            Add to Cart
+          </button>
+          {!!productInCart && (
+            <div className="product-details__number-input">
+              <NumberInput num={productInCart.quantity} />
+            </div>
+          )}
         </div>
       </div>
     </article>
