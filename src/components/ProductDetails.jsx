@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
-import { addToCart } from "../store/cart/cart.actions";
+import { addToCart, deleteFromCart } from "../store/cart/cart.actions";
 import { NotFound } from "../pages";
 import { NumberInput } from "../components/NumberInput";
 import "../styles/ProductDetails.scss";
@@ -21,6 +21,7 @@ function ProductDetails() {
   const productInCart = cartItems.find((item) => item.id === Number(id));
   const { image, title, description, price } = selectedProduct;
 
+  const handleRemoveFromCart = () => dispatch(deleteFromCart(Number(id)));
   const handleAddToCart = () => dispatch(addToCart(selectedProduct));
 
   return (
@@ -44,7 +45,11 @@ function ProductDetails() {
           </button>
           {!!productInCart && (
             <div className="product-details__number-input">
-              <NumberInput num={productInCart.quantity} />
+              <NumberInput
+                num={productInCart.quantity}
+                handleMinusBtn={handleRemoveFromCart}
+                handlePlusBtn={handleAddToCart}
+              />
             </div>
           )}
         </div>
