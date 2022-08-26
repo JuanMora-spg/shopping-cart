@@ -16,25 +16,30 @@ function ProductDetails() {
 
   const selectedProduct = products.find((product) => product.id === Number(id));
 
-  if (!selectedProduct) {
-    return <NotFound />;
-  }
-
   const productInCart = cartItems.find((item) => item.id === Number(id));
-  const { image, title, description, price } = selectedProduct;
 
   const handleRemoveFromCart = () => dispatch(deleteFromCart(Number(id)));
   const handleAddToCart = () => dispatch(addToCart(selectedProduct));
 
-  return (
-    <article className="product-details">
+  const renderNotFoundProduct = () => <p>This product does not exist</p>;
+
+  const renderProductDetail = () => (
+    <>
       <picture className="product-details__img-container">
-        <img className="product-details__img" src={image} alt="product image" />
+        <img
+          className="product-details__img"
+          src={selectedProduct.image}
+          alt="product image"
+        />
       </picture>
       <div className="product-details__content">
-        <h2 className="product-details__title">{title}</h2>
-        <p className="product-details__description">{description}</p>
-        <p className="product-details__price">{currencyFormat(price)}</p>
+        <h2 className="product-details__title">{selectedProduct.title}</h2>
+        <p className="product-details__description">
+          {selectedProduct.description}
+        </p>
+        <p className="product-details__price">
+          {currencyFormat(selectedProduct.price)}
+        </p>
         <div className="product-details__actions">
           <button
             className={`product-details__btn ${
@@ -56,6 +61,12 @@ function ProductDetails() {
           )}
         </div>
       </div>
+    </>
+  );
+
+  return (
+    <article className="product-details">
+      {selectedProduct ? renderProductDetail() : renderNotFoundProduct()}
     </article>
   );
 }
