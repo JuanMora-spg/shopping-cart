@@ -55,7 +55,12 @@ function cartReducer(state = initialState, action) {
             ),
           };
     case REMOVE_ALL_ITEMS_FROM_CART:
-      return state;
+      const itemId = action.payload;
+
+      return {
+        ...state,
+        cartItems: state.cartItems.filter((item) => item.id !== itemId),
+      };
     case CLEAR_CART:
       return initialState;
     default:
