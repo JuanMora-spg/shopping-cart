@@ -35,7 +35,25 @@ function cartReducer(state = initialState, action) {
             cartItems: [...state.cartItems, { ...newItem, quantity: 1 }],
           };
     case REMOVE_ONE_ITEM_FROM_CART:
-      return state;
+      const id = action.payload;
+
+      const itemToRemove = state.cartItems.find((item) => item.id === id);
+
+      return itemToRemove.quantity > 1
+        ? {
+            ...state,
+            cartItems: state.cartItems.map((item) =>
+              item.id === itemToRemove.id
+                ? { ...item, quantity: item.quantity - 1 }
+                : item
+            ),
+          }
+        : {
+            ...state,
+            cartItems: state.cartItems.filter(
+              (item) => item.id !== itemToRemove.id
+            ),
+          };
     case REMOVE_ALL_ITEMS_FROM_CART:
       return state;
     case CLEAR_CART:
