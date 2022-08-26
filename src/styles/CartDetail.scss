@@ -1,4 +1,5 @@
 @use "_mixins" as *;
+@use "_vars" as *;
 
 .cart-detail {
   position: absolute;
@@ -6,10 +7,10 @@
   top: 0;
   bottom: 0;
   width: 350px;
-  background-color: rgb(255, 255, 255);
+  background-color: $white;
 
   &__close {
-    @include btnIcon(black, 24px);
+    @include btnIcon($black, 24px);
   }
 
   &__title {
@@ -27,7 +28,7 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    box-shadow: 0px -15px 10px -15px hsla(0, 0%, 7%, 0.494);
+    box-shadow: 0px -15px 10px -15px $box-shadow;
   }
 
   &__text {
@@ -48,12 +49,12 @@
   }
 
   &__btn--danger {
-    border: solid 1px green;
+    border: solid 1px $primary-green;
   }
 
   &__btn--success {
-    background-color: green;
-    color: white;
+    background-color: $primary-green;
+    color: $white;
   }
 
   @include small-screen {

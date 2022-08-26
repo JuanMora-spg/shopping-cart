@@ -1,5 +1,7 @@
+@use "vars" as *;
+
 .nav {
-  background-color: #001e3c;
+  background-color: $primary-blue;
   padding: 0 1rem;
 
   &__list {
@@ -20,7 +22,7 @@
   }
 
   &__title {
-    color: white;
+    color: $white;
     font-weight: 800;
     font-size: 24px;
   }

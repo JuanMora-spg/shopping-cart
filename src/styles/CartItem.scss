@@ -1,27 +1,28 @@
 @use "mixins" as *;
+@use "vars" as *;
 
 .cart-item {
   position: relative;
   display: flex;
   flex-direction: column;
   padding-top: 20px;
-  border-top: solid 2px gray;
+  border-top: solid 2px $secondary-grey;
   justify-content: space-between;
 
   &__delete {
-    @include btnIcon(grey, 16px);
+    @include btnIcon($secondary-grey, 16px);
     position: absolute;
     top: 3px;
     right: 0;
     transition: color 0.5s ease;
 
     &:hover {
-      color: rgb(246, 75, 75);
+      color: $light-red;
     }
   }
 
   &__title {
-    color: grey;
+    color: $secondary-grey;
     margin: 0.25rem 0;
   }
 
@@ -30,7 +31,7 @@
     margin: auto;
   }
   &__text {
-    color: grey;
+    color: $secondary-grey;
     &--center {
       text-align: center;
     }
