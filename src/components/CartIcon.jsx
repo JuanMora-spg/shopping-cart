@@ -27,7 +27,7 @@ function CartIcon() {
           <span className="cart-icon__notification">{totalItemsInCart}</span>
         )}
       </div>
-      <Modal isOpen={isOpenCartModal}>
+      <Modal isOpen={isOpenCartModal} handleClose={handleClose}>
         <CartDetail handleClose={handleClose} />
       </Modal>
     </>
