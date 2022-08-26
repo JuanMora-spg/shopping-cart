@@ -28,7 +28,9 @@ function CartDetail({ handleClose }) {
         <FontAwesomeIcon icon={faXmark} />
       </button>
       {cartItems.length === 0 ? (
-        <p>Your cart is empty</p>
+        <p className="cart-detail__text cart-detail__text--center">
+          Your cart is empty
+        </p>
       ) : (
         <>
           <h3 className="cart-detail__title">Cart</h3>
