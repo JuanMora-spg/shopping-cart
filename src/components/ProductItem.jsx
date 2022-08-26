@@ -1,8 +1,9 @@
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import { addToCart, deleteFromCart } from "../store/cart/cart.actions";
+import { addToCart, deleteFromCart } from "../store/cart";
 import { NumberInput } from "./";
 import { currencyFormat } from "../utils/currencyFormat";
+
 import "../styles/ProductItem.scss";
 
 function ProductItem({ product }) {

@@ -1,9 +1,10 @@
 import { useSelector } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
-import { useModal } from "../hooks/useModal";
 import { Modal } from "./";
 import { CartDetail } from "./";
+import { useModal } from "../hooks/useModal";
+
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import "../styles/CartIcon.scss";
 
 function CartIcon() {

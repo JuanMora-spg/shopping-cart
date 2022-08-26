@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { CartIcon } from "./CartIcon";
+
 import "../styles/NavBar.scss";
 
 function NavBar() {

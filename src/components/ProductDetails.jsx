@@ -1,9 +1,10 @@
 import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
-import { addToCart, deleteFromCart } from "../store/cart/cart.actions";
+import { addToCart, deleteFromCart } from "../store/cart";
 import { NotFound } from "../pages";
 import { NumberInput } from "../components/NumberInput";
 import { currencyFormat } from "../utils/currencyFormat";
+
 import "../styles/ProductDetails.scss";
 
 function ProductDetails() {

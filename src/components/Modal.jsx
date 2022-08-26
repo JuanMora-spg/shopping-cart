@@ -4,8 +4,6 @@ import "../styles/Modal.scss";
 const domContainer = document.getElementById("modal");
 
 function Modal({ children, isOpen }) {
-  console.log("This is the modal status: ", isOpen);
-
   const modalStatus = isOpen ? "shown" : "hidden";
 
   return ReactDOM.createPortal(

@@ -1,9 +1,10 @@
 import { useSelector, useDispatch } from "react-redux";
-import { clearCart } from "../store/cart/cart.actions";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faXmark } from "@fortawesome/free-solid-svg-icons";
+import { clearCart } from "../store/cart";
 import { CartItem } from "./CartItem";
 import { currencyFormat } from "../utils/currencyFormat";
+
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import "../styles/CartDetail.scss";
 
 function CartDetail({ handleClose }) {

@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux";
 import { ProductItem } from "./ProductItem";
+
 import "../styles/ProductList.scss";
 
 function ProductList() {
