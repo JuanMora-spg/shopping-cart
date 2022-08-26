@@ -8,16 +8,15 @@
   width: 100%;
 
   &.shown {
-    background-color: $light-black;
+    background-color: transparent;
     left: 0;
     right: 0;
     animation: fadeInRight 0.3s ease;
   }
   &.hidden {
-    background-color: $light-black;
+    background-color: transparent;
     left: 100%;
     right: -100%;
-    animation: fadeOutRight 0.3s ease;
   }
 }
 
@@ -25,12 +24,5 @@
   0% {
     opacity: 0;
     transform: translateX(100%);
-  }
-}
-
-@keyframes fadeOutRight {
-  0% {
-    opacity: 0;
-    transform: translateX(-100%);
   }
 }
