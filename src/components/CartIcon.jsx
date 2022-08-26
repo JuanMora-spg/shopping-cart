@@ -23,7 +23,9 @@ function CartIcon() {
         <button type="button" title="shopping cart" className="cart-icon__btn">
           <FontAwesomeIcon icon={faCartShopping} />
         </button>
-        <span className="cart-icon__notification">{totalItemsInCart}</span>
+        {totalItemsInCart > 0 && (
+          <span className="cart-icon__notification">{totalItemsInCart}</span>
+        )}
       </div>
       <Modal isOpen={isOpenCartModal}>
         <CartDetail handleClose={handleClose} />
