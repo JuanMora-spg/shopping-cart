@@ -2,6 +2,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { addToCart, deleteFromCart } from "../store/cart/cart.actions";
 import { NumberInput } from "./";
+import { currencyFormat } from "../utils/currencyFormat";
 import "../styles/ProductItem.scss";
 
 function ProductItem({ product }) {
@@ -18,7 +19,7 @@ function ProductItem({ product }) {
   return (
     <article className="product-item">
       <img className="product-item__img" src={image} alt="product image" />
-      <p>$ {price}</p>
+      <p>{currencyFormat(price)}</p>
       <Link to={`product/${id}`} className="product-item__link">
         View
       </Link>

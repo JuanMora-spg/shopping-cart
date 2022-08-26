@@ -3,6 +3,7 @@ import { clearCart } from "../store/cart/cart.actions";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import { CartItem } from "./CartItem";
+import { currencyFormat } from "../utils/currencyFormat";
 import "../styles/CartDetail.scss";
 
 function CartDetail({ handleClose }) {
@@ -38,7 +39,7 @@ function CartDetail({ handleClose }) {
           </div>
           <div className="cart-detail__footer">
             <p className="cart-detail__text cart-detail__text--bolder">
-              Total: {totalToPay()}
+              Total: {currencyFormat(totalToPay())}
             </p>
             <button
               type="button"

@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { addToCart, deleteFromCart } from "../store/cart/cart.actions";
 import { NotFound } from "../pages";
 import { NumberInput } from "../components/NumberInput";
+import { currencyFormat } from "../utils/currencyFormat";
 import "../styles/ProductDetails.scss";
 
 function ProductDetails() {
@@ -32,7 +33,7 @@ function ProductDetails() {
       <div className="product-details__content">
         <h2 className="product-details__title">{title}</h2>
         <p className="product-details__description">{description}</p>
-        <p className="product-details__price">$ {price}</p>
+        <p className="product-details__price">{currencyFormat(price)}</p>
         <div className="product-details__actions">
           <button
             className={`product-details__btn ${
