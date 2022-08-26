@@ -8,6 +8,7 @@
   bottom: 0;
   width: 350px;
   background-color: $white;
+  box-shadow: -5px 0 20px 1px #00000015;
 
   &__close {
     @include btnIcon($black, 24px);
